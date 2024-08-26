@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900&display=swap" rel="stylesheet">
+    <style>
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .bg-gradient-animate {
+            background: linear-gradient(270deg, #ffffff, #000000, #ffffff, #000000);
+            background-size: 800% 800%;
+            animation: gradient 5s ease infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 1px #fff, 0 0 10px #fff, 0 0 20px rebeccapurple, 0 0 30px rebeccapurple, 0 0 40px rebeccapurple, 0 0 70px rebeccapurple, 0 0 60px rebeccapurple;
+            }
+            50% {
+                text-shadow: 0 0 10px #fff, 0 0 20px gainsboro, 0 0 30px gainsboro, 0 0 40px gainsboro, 0 0 50px gainsboro, 0 0 60px gainsboro, 0 0 70px gainsboro;
+            }
+        }
+
+        .animate-rainbow {
+            animation: rainbow 5s infinite;
+        }
+
+        .animate-glow {
+            animation: glow 2s infinite;
+        }
+    </style>
+</head>
+<body class="font-[Livvic]">
+    <header class="bg-[#014E56]">
+        <div class="relative flex flex-col md:flex-row items-center justify-between p-4 md:py-[2%] md:px-[10%] max-[768px]:flex">
+            <div class="absolute left-[10%] mb-4 md:mb-0 max-[1536px]:pt-[3%]">
+                <img src="assets/icons/myteam.png" alt="MyTeam Logo">
+            </div>
+
+            <nav class="absolute right-[10%] max-[375px]:hidden max-[1536px]:pt-[3%]">
+                <ul class="flex md:flex gap-4 md:gap-[50px] max-[768px]:gap-[10px]">
+                    <li><a class="inline-block shadow-black shadow-lg px-5 py-2 text-white font-medium text-lg hover:border-3 hover:border-white rounded-full hover:bg-white hover:text-teal-900 transition duration-500 ease-in-out hover:shadow-lg" href="#">Home</a></li>
+                    <li><a class="inline-block shadow-black shadow-lg px-5 py-2 text-white font-medium text-lg hover:border-3 hover:border-white rounded-full hover:bg-white hover:text-teal-900 transition duration-500 ease-in-out hover:shadow-lg" href="#">About</a></li>
+                    <li><a class="inline-block shadow-black shadow-lg px-5 py-2 text-white font-medium text-lg hover:border-3 hover:border-white rounded-full hover:bg-white hover:text-teal-900 transition duration-500 ease-in-out hover:shadow-lg" href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="absolute right-[5%] top-[90%] flex flex-col gap-[6px]">
+                <div class="w-[30px] h-[5px] max-[375px]:bg-white"></div>
+                <div class="w-[30px] h-[5px] max-[375px]:bg-white"></div>
+                <div class="w-[30px] h-[5px] max-[375px]:bg-white"></div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center justify-around py-[25%] md:py-[8%] text-center md:text-left">
+            <div class="">
+                <h1 class="text-[40px] text-white md:text-[50px] lg:text-[70px] font-bold animate-rainbow animate-glow">About</h1>
+            </div>
+
+            <div class="md:w-1/2 max-w-[90%] md:max-w-[670px] max-[768px]:w-[457px]">
+                <p class="text-[16px] text-white">We help companies build dynamic teams made up of top global talent. Using our network of passionate professionals, we drive innovation and deliver incredible outcomes. Talented, diverse teams shape the best products and experiences. We’ll bring those teams to you.</p>
+            </div> 
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-[#004047] w-[100%] min-h-[600px] flex flex-col items-center justify-center p-4">
+            <div class="pb-[4%]">
+                <h2 class="text-[36px] md:text-[50px] font-bold text-white">Meet the Directors</h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-around items-center gap-[50px] md:gap-[2%] pb-[5%]">
+                <div class="shadow-black shadow-lg relative w-[300px] md:w-[350px] h-[300px] md:h-[274px] bg-[#012F34] flex flex-col items-center gap-[5%] hover:bg-black transition duration-500 ease-in-out bg-gradient-to-t from-purple-800">
+                    <img class="pt-[8%]" src="assets/image/image.png" alt="Director Image" height="96px" width="96px">
+
+                    <div class="text-center">
+                        <p class="text-[#79C8C7] font-bold pt-[23.39px] text-[18px]">Nikita Marks</p>
+                        <p class="text-[#FFFFFF] text-[15px] font-medium">Founder & CEO</p>
+                    </div>
+
+                    <button class="absolute bottom-[-8%] flex items-center justify-center rounded-full w-[56px] h-[56px] bg-[#F67E7E] hover:bg-teal-300 transition duration-500 ease-in-out hover:border-[3px] hover:border-white">
+                        <img src="assets/icons/image.png" alt="Action Button" width="16px" height="16px">
+                    </button>
+                </div>
+
+                <div class="shadow-black shadow-lg relative w-[300px] md:w-[350px] h-[300px] md:h-[274px] bg-[#012F34] flex flex-col items-center gap-[5%] hover:bg-black transition duration-500 ease-in-out bg-gradient-to-t from-purple-800">
+                    <img class="pt-[8%]" src="assets/image/image copy.png" alt="Director Image" height="96px" width="96px">
+
+                    <div class="text-center">
+                        <p class="text-[#79C8C7] font-bold pt-[23.39px] text-[18px]">Cristian Duncan</p>
+                        <p class="text-[#FFFFFF] text-[15px] font-medium">Co-founder & COO</p>
+                    </div>
+
+                    <button class="absolute bottom-[-8%] flex items-center justify-center rounded-full w-[56px] h-[56px] bg-[#F67E7E] hover:bg-teal-300 transition duration-500 ease-in-out hover:border-[3px] hover:border-white">
+                        <img src="assets/icons/image.png" alt="Action Button" width="16px" height="16px">
+                    </button>
+                </div>
+
+                <div class="shadow-black shadow-lg relative w-[300px] md:w-[350px] h-[300px] md:h-[274px] bg-[#012F34] flex flex-col items-center gap-[5%] hover:bg-black transition duration-500 ease-in-out bg-gradient-to-t from-purple-800">
+                    <img class="pt-[8%]" src="assets/image/image copy 2.png" alt="Director Image" height="96px" width="96px">
+
+                    <div class="text-center">
+                        <p class="text-[#79C8C7] font-bold pt-[23.39px] text-[18px]">Cruz Hamer</p>
+                        <p class="text-[#FFFFFF] text-[15px] font-medium">Co-founder & CTO</p>
+                    </div>
+
+                    <button class="absolute bottom-[-8%] flex items-center justify-center rounded-full w-[56px] h-[56px] bg-[#F67E7E] hover:bg-teal-300 transition duration-500 ease-in-out hover:border-[3px] hover:border-white">
+                        <img src="assets/icons/image.png" alt="Action Button" width="16px" height="16px">
+                    </button>
+                </div>                
+            </div>
+        </section>
+
+        <section class="bg-[#012F34] py-10 md:py-[113px] flex flex-col items-center gap-[40px] md:gap-[56px]">
+            <div>
+                <h2 class="text-[36px] md:text-[48px] font-bold text-white text-center">Some of our clients</h2>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-8 md:gap-8">
+                <img class="shadow-black shadow-lg mx-[17px] w-[100px] md:w-[165px] bg-gradient-to-t from-white hover:bg-black bg-gray-700 inline-block px-6 py-3 font-medium text-lg hover:border-3 hover:border-white rounded-full transition duration-500 ease-in-out hover:shadow-lg" src="assets/icons/Rasm.png" alt="Client Logo 1">
+                <img class="shadow-black shadow-lg mx-[17px] w-[100px] md:w-[184px] bg-gradient-to-t from-white hover:bg-black bg-gray-700 inline-block px-6 py-3 font-medium text-lg hover:border-3 hover:border-white rounded-full transition duration-500 ease-in-out hover:shadow-lg" src="assets/icons/Rasm2.png" alt="Client Logo 2">
+                <img class="shadow-black shadow-lg mx-[17px] w-[100px] md:w-[180px] bg-gradient-to-t from-white hover:bg-black bg-gray-700 inline-block px-6 py-3 font-medium text-lg hover:border-3 hover:border-white rounded-full transition duration-500 ease-in-out hover:shadow-lg" src="assets/icons/Rasm3.png" alt="Client Logo 3">
+                <img class="shadow-black shadow-lg mx-[17px] w-[100px] md:w-[165px] bg-gradient-to-t from-white hover:bg-black bg-gray-700 inline-block px-6 py-3 font-medium text-lg hover:border-3 hover:border-white rounded-full transition duration-500 ease-in-out hover:shadow-lg" src="assets/icons/Rasm4.png" alt="Client Logo 4">
+                <img class="shadow-black shadow-lg mx-[17px] w-[100px] md:w-[98px] bg-gradient-to-t from-white hover:bg-black bg-gray-700 inline-block px-6 py-3 font-medium text-lg hover:border-3 hover:border-white rounded-full transition duration-500 ease-in-out hover:shadow-lg" src="assets/icons/Rasm5.png" alt="Client Logo 5">
+            </div>
+        </section>
+
+        <section class="bg-gradient-animate w-[100%] h-[200px] flex flex-col md:flex-row items-center justify-around px-4 md:px-[2%]">
+            <h3 class="text-[36px] md:text-[48px] font-bold">Ready to get started?</h3>
+            <button class=" mt-4 md:mt-0 w-[200px] h-[48px] border-[3px] border-black rounded-full text-[18px] font-semibold shadow-black shadow-lg hover:bg-white hover:text-black transition duration-500 ease-in-out">Contact Us</button>
+        </section>
+    </main>
+
+    <footer class="bg-[#002529] flex flex-col md:flex-row justify-around items-center w-[100%] h-[200px] md:h-[120px] gap-4 md:gap-[18%] p-4 md:p-0">
+        <div>
+            <img src="assets/icons/myteam.png" alt="MyTeam Logo">
+        </div>
+
+        <ul class="flex gap-4 md:gap-[18px]">
+            <li class="animate-bounce shadow-black shadow-lg">
+                <a class="hover:transition hover:duration-300 hover:ease-in-out w-[34px] h-[34px] hover:bg-[#2f44ff] transition duration-1000 ease-in-out border-[1.6px] hover:border-white flex items-center justify-center rounded-[5px]" href="https://www.facebook.com/sirojj.alimjonaovv">
+                    <img class="hover:transition hover:duration-500 hover:ease-in-out transition duration-500 ease-in-out" src="assets/icons/facebook-logo.svg" alt="Facebook">
+                </a>
+            </li>
+            <li class="animate-bounce shadow-black shadow-lg">
+                <a class="hover:transition hover:duration-300 hover:ease-in-out w-[34px] h-[34px] hover:bg-[#ff2828] transition duration-1000 ease-in-out border-[1.6px] hover:border-white flex items-center justify-center rounded-[5px]" href="https://www.pinterest.com/sirojiddinalimjonov/">
+                    <img class="hover:transition hover:duration-500 hover:ease-in-out transition duration-500 ease-in-out" src="assets/icons/pinterest-logo.svg" alt="Pinterest">
+                </a>
+            </li>
+            <li class="animate-bounce shadow-black shadow-lg">
+                <a class="hover:transition hover:duration-300 hover:ease-in-out w-[34px] h-[34px] hover:bg-[#34cec4] transition duration-1000 ease-in-out border-[1.6px] hover:border-white flex items-center justify-center rounded-[5px]" href="https://x.com/Alimjon0ff">
+                    <img class="hover:transition hover:duration-500 hover:ease-in-out transition duration-500 ease-in-out" src="assets/icons/twitter-logo.svg" alt="Twitter">
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
